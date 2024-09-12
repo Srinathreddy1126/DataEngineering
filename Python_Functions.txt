@@ -1,0 +1,370 @@
+What are Python Functions?
+A collection of related assertions that carry out a mathematical, analytical, or evaluative operation is known as a function. An assortment of proclamations called Python Capabilities returns the specific errand. Python functions are necessary for intermediate-level programming and are easy to define. Function names meet the same standards as variable names do. The objective is to define a function and group-specific frequently performed actions. Instead of repeatedly creating the same code block for various input variables, we can call the function and reuse the code it contains with different variables.
+
+Client-characterized and worked-in capabilities are the two primary classes of capabilities in Python. It aids in maintaining the program's uniqueness, conciseness, and structure.
+
+Advantages of Python Functions
+We can stop a program from repeatedly using the same code block by including functions.
+
+Once defined, Python functions can be called multiple times and from any location in a program.
+Our Python program can be broken up into numerous, easy-to-follow functions if it is significant.
+The ability to return as many outputs as we want using a variety of arguments is one of Python's most significant achievements.
+However, Python programs have always incurred overhead when calling functions.
+However, calling functions has always been overhead in a Python program.
+
+Syntax
+
+#  An example Python Function  
+def function_name( parameters ):  
+    # code block  
+
+The accompanying components make up to characterize a capability, as seen previously.
+
+The start of a capability header is shown by a catchphrase called def.
+function_name is the function's name, which we can use to distinguish it from other functions. We will utilize this name to call the capability later in the program. Name functions in Python must adhere to the same guidelines as naming variables.
+Using parameters, we provide the defined function with arguments. Notwithstanding, they are discretionary.
+A colon (:) marks the function header's end.
+We can utilize a documentation string called docstring in the short structure to make sense of the reason for the capability.
+Several valid Python statements make up the function's body. The entire code block's indentation depth-typically four spaces-must be the same.
+A return expression can get a value from a defined function.
+Illustration of a User-Defined Function
+We will define a function that returns the argument number's square when called.
+
+# Example Python Code for User-Defined function  
+def square( num ):    
+    """  
+    This function computes the square of the number.  
+    """    
+    return num**2     
+object_ = square(6)    
+print( "The square of the given number is: ", object_ )    
+Output:
+
+The square of the given number is:  36
+Calling a Function
+Calling a Function To define a function, use the def keyword to give it a name, specify the arguments it must receive, and organize the code block.
+When the fundamental framework for a function is finished, we can call it from anywhere in the program. An illustration of how to use the a_function function can be found below.
+
+# Example Python Code for calling a function  
+# Defining a function    
+def a_function( string ):    
+    "This prints the value of length of string"    
+    return len(string)    
+    
+# Calling the function we defined    
+print( "Length of the string Functions is: ", a_function( "Functions" ) )    
+print( "Length of the string Python is: ", a_function( "Python" ) )    
+Output:
+
+Length of the string Functions is:  9
+Length of the string Python is:  6
+Pass by Reference vs. Pass by Value
+In the Python programming language, all parameters are passed by reference. It shows that if we modify the worth of contention within a capability, the calling capability will similarly mirror the change. For instance,
+
+Code
+
+# Example Python Code for Pass by Reference vs. Value  
+# defining the function    
+def square( item_list ):    
+    '''''''This function will find the square of items in the list'''    
+    squares = [ ]    
+    for l in item_list:    
+        squares.append( l**2 )    
+    return squares    
+    
+# calling the defined function    
+my_list = [17, 52, 8];    
+my_result = square( my_list )    
+print( "Squares of the list are: ", my_result )    
+Output:
+
+Squares of the list are:  [289, 2704, 64]
+
+Function Arguments
+The following are the types of arguments that we can use to call a function:
+
+Default arguments
+KeyWhen the fundamental framework for a function is finished, we can call it from anywhere in the program. An illustration of how to use the a_function function can be found below.
+
+# Example Python Code for calling a function  
+# Defining a function    
+def a_function( string ):    
+    "This prints the value of length of string"    
+    return len(string)    
+    
+# Calling the function we defined    
+print( "Length of the string Functions is: ", a_function( "Functions" ) )    
+print( "Length of the string Python is: ", a_function( "Python" ) )    
+Output:
+
+Length of the string Functions is:  9
+Length of the string Python is:  6
+Pass by Reference vs. Pass by Value
+In the Python programming language, all parameters are passed by reference. It shows that if we modify the worth of contention within a capability, the calling capability will similarly mirror the change. For instance,
+
+Code
+
+# Example Python Code for Pass by Reference vs. Value  
+# defining the function    
+def square( item_list ):    
+    '''''''This function will find the square of items in the list'''    
+    squares = [ ]    
+    for l in item_list:    
+        squares.append( l**2 )    
+    return squares    
+    
+# calling the defined function    
+my_list = [17, 52, 8];    
+my_result = square( my_list )    
+print( "Squares of the list are: ", my_result )    
+Output:
+
+Squares of the list are:  [289, 2704, 64]
+
+Function Arguments
+The following are the types of arguments that we can use to call a function:
+
+Default arguments
+Keyword arguments
+Required arguments
+Variable-length arguments
+
+1) Default Arguments
+A default contention is a boundary that takes as information a default esteem, assuming that no worth is provided for the contention when the capability is called. The following example demonstrates default arguments.
+
+
+
+Code
+
+# Python code to demonstrate the use of default arguments    
+# defining a function    
+def function( n1, n2 = 20 ):    
+    print("number 1 is: ", n1)    
+    print("number 2 is: ", n2)    
+     
+     
+# Calling the function and passing only one argument    
+print( "Passing only one argument" )    
+function(30)    
+    
+# Now giving two arguments to the function    
+print( "Passing two arguments" )    
+function(50,30)    
+Output:
+
+Passing only one argument
+number 1 is:  30
+number 2 is:  20
+Passing two arguments
+number 1 is:  50
+number 2 is:  30
+2) Keyword Arguments
+Keyword arguments are linked to the arguments of a called function. While summoning a capability with watchword contentions, the client might tell whose boundary esteem it is by looking at the boundary name.
+
+
+
+We can eliminate or orchestrate specific contentions in an alternate request since the Python translator will interface the furnished watchwords to connect the qualities with its boundaries. One more method for utilizing watchwords to summon the capability() strategy is as per the following:
+
+Code
+
+# Python code to demonstrate the use of keyword arguments    
+  # Defining a function    
+def function( n1, n2 ):    
+    print("number 1 is: ", n1)    
+    print("number 2 is: ", n2)    
+    
+# Calling function and passing arguments without using keyword    
+print( "Without using keyword" )    
+function( 50, 30)       
+        
+# Calling function and passing arguments using keyword    
+print( "With using keyword" )    
+function( n2 = 50, n1 = 30)    
+
+Output:
+
+Without using keyword
+number 1 is:  50
+number 2 is:  30
+With using keyword
+number 1 is:  30
+number 2 is:  50
+3) Required Arguments
+Required arguments are those supplied to a function during its call in a predetermined positional sequence. The number of arguments required in the method call must be the same as those provided in the function's definition.
+
+We should send two contentions to the capability() all put together; it will return a language structure blunder, as seen beneath.
+
+Code
+
+# Python code to demonstrate the use of default arguments      
+# Defining a function    
+def function( n1, n2 ):    
+    print("number 1 is: ", n1)    
+    print("number 2 is: ", n2)    
+    
+# Calling function and passing two arguments out of order, we need num1 to be 20 and num2 to be 30    
+print( "Passing out of order arguments" )    
+function( 30, 20 )       
+    
+# Calling function and passing only one argument    
+print( "Passing only one argument" )    
+try:    
+    function( 30 )    
+except:    
+    print( "Function needs two positional arguments" )  
+Output:
+
+Passing out of order arguments
+number 1 is:  30
+number 2 is:  20
+Passing only one argument
+Function needs two positional arguments
+4) Variable-Length Arguments
+We can involve unique characters in Python capabilities to pass many contentions. However, we need a capability. This can be accomplished with one of two types of characters:
+
+"args" and "kwargs" refer to arguments not based on keywords.
+
+To help you understand arguments of variable length, here's an example.
+
+Code
+
+# Python code to demonstrate the use of variable-length arguments       
+# Defining a function    
+def function( *args_list ):    
+    ans = []    
+    for l in args_list:    
+        ans.append( l.upper() )    
+    return ans    
+# Passing args arguments    
+object = function('Python', 'Functions', 'tutorial')    
+print( object )    
+    
+# defining a function    
+def function( **kargs_list ):    
+    ans = []    
+    for key, value in kargs_list.items():    
+        ans.append([key, value])    
+    return ans    
+# Paasing kwargs arguments    
+object = function(First = "Python", Second = "Functions", Third = "Tutorial")    
+print(object)    
+Output:
+
+['PYTHON', 'FUNCTIONS', 'TUTORIAL']
+[['First', 'Python'], ['Second', 'Functions'], ['Third', 'Tutorial']]
+return Statement
+When a defined function is called, a return statement is written to exit the function and return the calculated value.
+
+Syntax:
+
+return < expression to be returned as output >    
+The return statement can be an argument, a statement, or a value, and it is provided as output when a particular job or function is finished. A declared function will return an empty string if no return statement is written.
+
+A return statement in Python functions is depicted in the following example.
+
+Code
+
+# Python code to demonstrate the use of return statements      
+# Defining a function with return statement    
+def square( num ):    
+    return num**2    
+     
+# Calling function and passing arguments.    
+print( "With return statement" )    
+print( square( 52 ) )    
+    
+# Defining a function without return statement     
+def square( num ):    
+     num**2     
+    
+# Calling function and passing arguments.    
+print( "Without return statement" )    
+print( square( 52 ) )    
+Output:
+
+With return statement
+2704
+Without return statement
+None
+
+The Anonymous Functions
+Since we do not use the def keyword to declare these kinds of Python functions, they are unknown. The lambda keyword can define anonymous, short, single-output functions.
+
+Arguments can be accepted in any number by lambda expressions; However, the function only produces a single value from them. They cannot contain multiple instructions or expressions. Since lambda needs articulation, a mysterious capability can't be straightforwardly called to print.
+
+Lambda functions can only refer to variables in their argument list and the global domain name because they contain their distinct local domain.
+
+In contrast to inline expressions in C and C++, which pass function stack allocations at execution for efficiency reasons, lambda expressions appear to be one-line representations of functions.
+
+Syntax
+
+Lambda functions have exactly one line in their syntax:
+
+lambda [argument1 [,argument2... .argumentn]] : expression    
+Below is an illustration of how to use the lambda function:
+
+Code
+
+# Python code to demonstrate ananymous functions  
+# Defining a function    
+lambda_ = lambda argument1, argument2: argument1 + argument2;    
+    
+# Calling the function and passing values    
+print( "Value of the function is : ", lambda_( 20, 30 ) )    
+print( "Value of the function is : ", lambda_( 40, 50 ) )    
+Output:
+
+Value of the function is :  50
+Value of the function is :  90
+
+Scope and Lifetime of Variables
+A variable's scope refers to the program's domain wherever it is declared. A capability's contentions and factors are not external to the characterized capability. They only have a local domain as a result.
+
+The length of time a variable remains in RAM is its lifespan. The lifespan of a function is the same as the lifespan of its internal variables. When we exit the function, they are taken away from us. As a result, the value of a variable in a function does not persist from previous executions.
+
+An easy illustration of a function's scope for a variable can be found here.
+
+Code
+
+# Python code to demonstrate scope and lifetime of variables  
+#defining a function to print a number.    
+def number( ):    
+    num = 50    
+    print( "Value of num inside the function: ", num)    
+    
+num = 10    
+number()    
+print( "Value of num outside the function:", num)    
+Output:
+
+Value of num inside the function:  50
+Value of num outside the function: 10
+Here, we can see that the initial value of num is 10. Even though the function number() changed the value of num to 50, the value of num outside of the function remained unchanged.
+
+This is because the capability's interior variable num is not quite the same as the outer variable (nearby to the capability). Despite having a similar variable name, they are separate factors with discrete extensions.
+
+Factors past the capability are available inside the capability. The impact of these variables is global. We can retrieve their values within the function, but we cannot alter or change them. The value of a variable can be changed outside of the function if it is declared global with the keyword global.
+
+
+Python Capability inside Another Capability
+Capabilities are viewed as top-of-the-line objects in Python. First-class objects are treated the same everywhere they are used in a programming language. They can be stored in built-in data structures, used as arguments, and in conditional expressions. If a programming language treats functions like first-class objects, it is considered to implement first-class functions. Python lends its support to the concept of First-Class functions.
+
+A function defined within another is called an "inner" or "nested" function. The parameters of the outer scope are accessible to inner functions. Internal capabilities are developed to cover them from the progressions outside the capability. Numerous designers see this interaction as an embodiment.
+
+Code
+
+# Python code to show how to access variables of a nested functions    
+# defining a nested function    
+def word():    
+    string = 'Python functions tutorial'    
+    x = 5     
+    def number():    
+        print( string )   
+        print( x )  
+             
+    number()    
+word()    
+Output:
+
+Python functions tutorial
+5
